@@ -14,5 +14,5 @@ RUN \
     
 COPY supervisord.conf /etc/supervisord.conf
     
-ENV KCPTUN_ARGS="-l :3 -t 127.0.0.1:1 -crypt aes --key CTYDDDDDDBUG --mtu 1200 --nocomp --mode fast --dscp 46 --parityshard 0"
+ENV KCPTUN_ARGS="-l :3 -t 127.0.0.1:1 -crypt none --mtu 1200 --nocomp --mode fast --dscp 46 --parityshard 0"
 ENTRYPOINT ["/usr/bin/supervisord"]
