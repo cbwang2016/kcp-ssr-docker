@@ -13,7 +13,7 @@ RUN \
     && apk add --no-cache supervisor
     
 COPY supervisord.conf /etc/supervisord.conf
-COPY start.sh /start.sh
+ADD start.sh /start.sh
 RUN chmod +x /start.sh
     
 ENV KCPTUN_ARGS="-l :8081 -t 127.0.0.1:8080 -crypt none --mtu 1200 --nocomp --mode normal --dscp 46 --parityshard 0"
