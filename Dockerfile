@@ -1,6 +1,6 @@
 FROM cbwang/ssr-docker
 
-ENV KCP_VER 20161031
+ENV KCP_VER 20161202
 
 RUN \
     apk add --no-cache --virtual .build-deps curl \
